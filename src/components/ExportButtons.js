@@ -2,16 +2,23 @@ import '../styles/export-button.css'
 import {useState} from "react";
 
 function ExportButtons(props) {
-    const [isCopied, setIsCopied] = useState(false);
+    const [isHtmlCopied, setIsHtmlCopied] = useState(false);
+    const [isConfigCopied, setIsConfigCopied] = useState(false);
 
-    function copy(objectToCopy) {
+    function copy(objectToCopy, type) {
         const clipboardCopy = new Promise((res, rej) => {
             res(navigator.clipboard.writeText(objectToCopy));
         })
             .then(() => {
-                setIsCopied(true);
-                setTimeout(() => setIsCopied(false)
-                    , 1000)
+                if (type === "html"){
+                    setIsHtmlCopied(true);
+                    setTimeout(() => setIsHtmlCopied(false)
+                        , 1000)
+                } else {
+                    setIsConfigCopied(true);
+                    setTimeout(() => setIsConfigCopied(false)
+                        , 1000)
+                }
             })
     }
 
@@ -20,15 +27,19 @@ function ExportButtons(props) {
             <button className="button" id="download">
                 Скачать PNG
             </button>
-            <button className="button" id="copy-html"
+            <button className="button"
                     onClick={() => {
                         let bannerHTML = document.querySelector("#banner").innerHTML;
-                        copy(bannerHTML);
+                        copy(bannerHTML, "html");
                     }}>
-                {isCopied ? "Скопировано" : "Скопировать как HTML"}
+                {isHtmlCopied ? "Скопировано" : "Скопировать как HTML"}
             </button>
-            <button className="button" id="copy-conf">
-                Скопировать конфигурацию
+            <button className="button"
+                    onClick={() => {
+                        let config = JSON.stringify(props);
+                        copy(config, "config");
+                    }}>
+                {isConfigCopied ? "Скопировано" : "Скопировать конфигурацию"}
             </button>
         </div>
     );

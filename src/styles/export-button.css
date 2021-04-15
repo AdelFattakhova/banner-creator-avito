@@ -6,7 +6,9 @@
 }
 
 .button {
-    padding: 20px 35px;
+    width: 32%;
+    min-height: 76px;
+    padding: 0 10px;
     background-color: #21262b;
     cursor: pointer;
     color: #ffffff;

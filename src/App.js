@@ -28,7 +28,7 @@ function App() {
             <main className="main">
                 <Preview {...formState}/>
                 <Form {...{...formState, handleFormChange}}/>
-                <ExportButtons/>
+                <ExportButtons {...formState}/>
             </main>
         </>
     );
