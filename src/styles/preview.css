@@ -1,0 +1,40 @@
+.banner {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-bottom: 3em;
+    width: 313px;
+    height: 417px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.banner__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.banner__image {
+    align-self: flex-end;
+    width: 70%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__text {
+    padding: 0 1.3em 0 .8em;
+    word-wrap: break-word;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
