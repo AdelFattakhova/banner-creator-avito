@@ -1,11 +1,12 @@
 import Form from './components/Form';
 import Preview from "./components/Preview";
 import Header from "./components/Header";
+// import Modal from "./components/Modal"
 import {useState} from "react";
-import ExportButton from "./components/ExportButton";
+import ExportButtons from "./components/ExportButtons";
 
 function App() {
-    const [formState, setFormState] = useState( {
+    const [formState, setFormState] = useState({
         image: '',
         text: '',
         color: '#9886a2',
@@ -27,9 +28,7 @@ function App() {
             <main className="main">
                 <Preview {...formState}/>
                 <Form {...{...formState, handleFormChange}}/>
-                <section className="buttons">
-                    <ExportButton/>
-                </section>
+                <ExportButtons/>
             </main>
         </>
     );

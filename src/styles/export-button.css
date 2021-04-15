@@ -1,5 +1,22 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 40px auto 0;
+}
+
 .button {
-    display: inline-block;
     padding: 20px 35px;
-    background-color: burlywood;
+    background-color: #21262b;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: rgba(33, 38, 43, 0.47);
 }
