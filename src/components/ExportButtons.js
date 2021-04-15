@@ -1,5 +1,6 @@
 import '../styles/export-button.css'
 import {useState} from "react";
+import {exportPNG} from "../exportPreview";
 
 function ExportButtons(props) {
     const [isHtmlCopied, setIsHtmlCopied] = useState(false);
@@ -24,7 +25,7 @@ function ExportButtons(props) {
 
     return (
         <div className="buttons">
-            <button className="button" id="download">
+            <button className="button" onClick={exportPNG}>
                 Сохранить в PNG
             </button>
             <button className="button"

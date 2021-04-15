@@ -2,7 +2,7 @@ import '../styles/preview.css'
 
 function Preview(props) {
     const imageStyle = {
-        height: "70%",
+        height: "60%",
         backgroundImage: `url(${props.image})`,
     }
 
