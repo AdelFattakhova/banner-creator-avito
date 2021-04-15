@@ -34,9 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-colorful": "^5.1.2",
-    "react-component-export-image": "^1.0.5"
   }
 }

@@ -2,20 +2,20 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 40px auto 0;
+    margin: 40px auto;
 }
 
 .button {
     width: 32%;
     min-height: 76px;
     padding: 0 10px;
-    background-color: #21262b;
-    cursor: pointer;
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
+    background-color: #21262b;
     border: none;
     outline: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button:hover,

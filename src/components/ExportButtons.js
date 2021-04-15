@@ -25,7 +25,7 @@ function ExportButtons(props) {
     return (
         <div className="buttons">
             <button className="button" id="download">
-                Скачать PNG
+                Сохранить в PNG
             </button>
             <button className="button"
                     onClick={() => {
